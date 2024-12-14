@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Update</title>
+    <link href="weather.css", rel="stylesheet">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+    <script src="https://kit.fontawesome.com/79d257c818.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</head>
+<body>
+    <!-- // loading page -->
+    <div class="overlay">
+        <p class="modal">Fetching weather...</p>
+    </div>
+
+    <div class="header">
+        <div class="upper">
+            <div class="logo">
+                <img src="assest/logo.png" alt="una" class="logo-img">
+                <!-- <div> -->
+                    <p>Weather <br>Update </p>
+                <!-- </div> -->
+            </div>
+            <div class="city-search">
+                <input type="search" placeholder="Search City" id="search" >
+                <section class="city">City</section>
+            </div>
+            <a href="#" >
+                <select name="Country" id="contry" class="dropdown">
+                    <option value="india">India</option>
+                    <option value="india">America</option>
+                    <option value="india">Bangladesh</option>
+                    <option value="india">China</option>
+                    <!-- <option value="india">India</option>
+                    <option value="india">India</option> -->
+                </select>
+            </a>
+        </div >
+        <div class="navbar">
+            <a href="weather.html">Home</a>
+            <a href="#weakly">weakly forcast</a>
+            <a href="#">Wind</a>
+            <a href="#">Radar</a>
+            <a href="#">about city</a>
+        </div>
+        <div  id="responsive-search">
+            <input type="search" placeholder="Search City" id="search" >
+            <!-- <section class="city">City</section> -->
+             <input type="radio" id="hamburger" style="display: none;">
+             <label for="hamburger" ><i class="fa-solid fa-bars"></i></label>
+             <label for="hamburger"><i class="fa-solid fa-xmark"></i></label>
+        </div>
+    </div>
+
+    <marquee style="color: rgba(255, 0, 0, 0.611);">*NOTE :- Some functionality may not working, due to unavailability of resources.</marquee>
+
+    <div class="main">
+        <div class="today-report">
+            <section style="line-height: 2px; position: relative; top: 1.5rem; left: 1.3rem;">
+                <span style="color: rgb(54, 63, 37); font-weight: 550;"><i class="fa-solid fa-location-dot"></i></span>
+                <p id="city" style="color: rgb(54, 63, 37); font-weight: 550; display: inline;">City</p>
+                <p id="dateTime" style="font-size: 17px; color: rgb(63, 77, 38); padding-left: 10px;">00/01/2024|00:00</p>
+            </section>
+           <div class="today-weather_card">
+                <div class="today-cloud">
+                    <img src="assest/cloudy-day.png" alt="unavailable" class="cloud-img">
+
+                    <div >
+                        <span class="cloud" > Nan</span >
+                    </div>
+                </div>
+                <div class="for-grid">
+                    <div >
+                        <span>Sunrise :</span>
+                        <span class="sunrise">0</span>
+                    </div>
+                    <div >
+                        <span>Sunset :</span>
+                        <span class="sunset">0</span>
+                    </div>
+                    <div class="temp">
+                        <span>Tempreture :</span>
+                        <span class="mintemp">0 </span>
+                        <!-- <span>/</span> -->
+                        <!-- <span class="maxtemp">0 </span> -->
+                        <span><sup>o</sup>C</span>
+                    </div>
+                    <div >
+                        <span>Wind :</span>
+                        <span class="wind">0</span>
+                        <span>kmph</span>
+                    </div>
+                    <div >
+                        <span>Humidity :</span>
+                        <span class="humidity">0</span>
+                    </div>
+                    <div >
+                        <span>Pressure :</span>
+                        <span class="pressure">0</span>
+                        <span>Mbar</span>
+                    </div>
+                    <div >
+                        <span>Haze :</span>
+                        <span class="haze">0</span>
+                    </div>
+                    <div >
+                        <span>UV :</span>
+                        <span class="uv">0</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Hourly table -->
+            <div class="table-contain">
+                <h1 style=" margin-top: 0rem; color: #3a5c059e; font-weight: 500; position: absolute; left:40rem;" >Hourly Forcast</h1>
+                <table class="table" id="hour">
+                    <table style="position: absolute; top: 49.3rem; background-color: transparent; opacity: .7;">
+                        <!-- <tr>
+                            <td>
+                                <i class="fa-regular fa-clock" style="color: black;"></i>
+                            </td> -->
+                        </tr>
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <i class="fa-solid fa-cloud-sun" style="color: black;"></i>
+                            </td>
+                        </tr>
+                        <tr style="background-color: transparent;">
+                            <td><i class="fa-solid fa-temperature-high" style="color: black;"></i></td>
+                        </tr>
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <box-icon type='solid' name='droplet-half'></box-icon>
+                            </td>
+                        </tr>
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <box-icon name='wind'></box-icon>
+                            </td>
+                        </tr>
+                        <tr style="background-color: transparent;">
+                            <td>
+                                <img src="assest/pressure.png" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </table>
+            </div>
+        </div>
+        <!-- <div class="add">
+            some additionals
+        </div> -->
+
+    </div>
+
+    <h1>7-days Weather Forcast</h1>
+    <div id="weakly" style="width: 100%; padding-bottom: 2rem">
+        <table class="table" id="day_table" style="width: 85%; padding-bottom: 5rem;">
+            <tr>
+                <th> Day/Date</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+                <th>Condition</th>
+                <th>Tempreture</th>
+                <th>Humidity</th>
+                <th>Wind</th>
+                <th>UV index</th>
+            </tr>
+            
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <div class="contains">
+            <div class="logo">
+                <!-- <div> -->
+                    <img src="assest/logo.png" alt="una" class="logo-img">
+                <!-- </div> -->
+                <!-- <div> -->
+                    <p>Weather <br>Update </p>
+                <!-- </div> -->
+            </div>
+            <div class="host">
+                <p><a href="https://www.weatherapi.com/">Weather API</a></p>
+                
+                
+            </div class="doc">
+            <div>
+            <p><a href="#"> Policy & Privacy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+
+            </div>
+        </div>
+        <section id="bottom"><a href="#">@Copyrights</a> | 2024 | Jamshedpur, Jharkhand</section>
+    </div>
+    <script src="weather.js" ></script>
+</body>
+</html>

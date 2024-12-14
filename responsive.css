@@ -1,0 +1,70 @@
+@media screen and (max-width: 775px) {
+    .today-weather_card{
+        left: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 548px) {
+    .city-search{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .today-weather_card{
+        left: 2rem;
+    }
+    .for-grid span{
+        font-size: 21.3px;
+
+    }
+    
+}
+
+@media screen and (max-width: 381px) {
+    .city-search{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    #responsive-search{
+        display: block;
+    }
+    #search{
+        background-color: rgb(164, 138, 185);
+        margin-left: .8rem;
+        width: 200px;
+    }
+    
+    .today-weather_card{
+        left: 1rem;
+        width: 85%;
+        height: 40%;
+    }
+    .for-grid span{
+        font-size: 15px;
+
+    }
+    .cloud{
+        font-size: 20px;
+    }
+    .cloud-img{
+        height: 6rem;
+        width: 3.5rem;
+    }
+    .dropdown{
+        width: 65px;
+        height: 25px;
+        font-size: 17px;
+    }
+
+    .footer{
+        height: 300px;
+    }
+    .contains{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
